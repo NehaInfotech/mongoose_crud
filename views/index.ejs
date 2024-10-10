@@ -25,15 +25,16 @@
               </td>
           </tr>
           <tr>
-              <td>Hobby:</td>
-              <td>
-                  <input type="checkbox" name="hobby" value="cricket" <%= (update && update.hobby ==='cricket'? 'checked' : '') %> /> Cricket
-                  <input type="checkbox" name="hobby" value="hockey" <%= (update && update.hobby === 'hockey'? 'checked' : '') %> /> Hockey
-                  <input type="checkbox" name="hobby" value="football" <%= (update && update.hobby ==='football' ? 'checked' : '') %> /> Football
-                  <input type="checkbox" name="hobby" value="kabaddi" <%= (update && update.hobby === 'kabaddi' ? 'checked' : '') %> /> Kabaddi
-                  <input type="checkbox" name="hobby" value="wrestling" <%= (update && update.hobby=== 'wrestling'? 'checked' : '') %> /> Write Poetry
-              </td>
-          </tr>
+            <td>Hobby:</td>
+            <td>
+                <input type="checkbox" name="hobby" value="cricket" <%= (update && update.hobby.includes('cricket') ? 'checked' : '') %> /> Cricket
+                <input type="checkbox" name="hobby" value="hockey" <%= (update && update.hobby.includes('hockey') ? 'checked' : '') %> /> Hockey
+                <input type="checkbox" name="hobby" value="football" <%= (update && update.hobby.includes('football') ? 'checked' : '') %> /> Football
+                <input type="checkbox" name="hobby" value="kabaddi" <%= (update && update.hobby.includes('kabaddi') ? 'checked' : '') %> /> Kabaddi
+                <input type="checkbox" name="hobby" value="poetry" <%= (update && update.hobby.includes('poetry') ? 'checked' : '') %> /> Write Poetry
+            </td>
+        </tr>
+        
           <tr>
               <td>City:</td>
               <td>

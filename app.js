@@ -17,7 +17,7 @@ app.get('/',async(req,res)=>{
     const allData=await friend.find()
     res.render('index',{allData,update:null})
 })
-app.post('/createdata',async(req,res)=>{
+app.post('/createdata',async(req,res)=>{ 
     console.log(req.body);
     const data =req.body
     if(data.id !== "")
@@ -38,7 +38,7 @@ app.get('/deleteData',async(req,res)=>{
 app.get('/updateData',async(req,res)=>{
     const updateId = req.query.updatei;
     console.log(updateId);
-    const update=await friend.findByIdAndUpdate(updateId)
+    const update=await friend.findById(updateId)
     const allData=await friend.find()
     res.render('index',{allData,update})
 })
